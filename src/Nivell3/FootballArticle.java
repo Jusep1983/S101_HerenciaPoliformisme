@@ -1,6 +1,6 @@
 package Nivell3;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 public class FootballArticle extends Article {
     private String competition = "";
@@ -15,7 +15,6 @@ public class FootballArticle extends Article {
         super.price = calculatePriceArticle();
         super.score = calculateScoreArticle();
     }
-
 
     public String getCompetition() {
         return competition;

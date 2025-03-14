@@ -98,7 +98,6 @@ public class MainSportsNewsroom {
                     break;
                 case 4:
                     showAllEditors();
-                    System.out.println("Lista de editores: ");
                     dniEditor = KeyboardInputs.readANonEmptyString(
                             "Introduce el DNI del redactor a eliminarle notícia: ");
                     indexEditor = findDniEditor(dniEditor);
@@ -175,7 +174,6 @@ public class MainSportsNewsroom {
             awnser = "";
             subMenuExit = false;
         } while (!exit);
-
     }
 
     //---------------------------------------------------------------------------------------------------------------------

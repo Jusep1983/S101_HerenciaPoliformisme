@@ -6,10 +6,11 @@ public class MainCotxe {
         Car car1 = new Car();
         System.out.println(Car.brakes());
         System.out.println(car1.accelerate());
-        //Proves:
-//        System.out.println(Car.brand);
-//        System.out.println(car1.getPower());
-//        System.out.println(Car.getModel());
+//        //Tests:
+//        System.out.println(car1);
+//        System.out.println(car1.BRAND);
+//        System.out.println(car1.getPOWER());
+//        System.out.println(car1.getModel());
     }
 
 }

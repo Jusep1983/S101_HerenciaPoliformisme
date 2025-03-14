@@ -26,7 +26,7 @@ public class Telephone  {
     }
 
     public String call(int phoneNumber) {
-        return "S'està trucant al número " + phoneNumber;
+        return "The number is being called " + phoneNumber;
     }
 
     @Override

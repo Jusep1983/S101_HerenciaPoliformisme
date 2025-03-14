@@ -12,9 +12,9 @@ package Nivell1Ex2;
 //
 //Demostra com invocar el mètode estàtic i el no estàtic des del main() de la classe principal.
 public class Car {
-    static final String brand = "Seat";
+    static final String BRAND = "Seat";
     private static String model = "Exeo";
-    private final int power = 2100;
+    private final int POWER = 2100;
 
     public Car() {
 
@@ -28,8 +28,8 @@ public class Car {
         Car.model = model;
     }
 
-    public int getPower() {
-        return power;
+    public int getPOWER() {
+        return POWER;
     }
 
     public static String brakes() {
@@ -42,8 +42,10 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "power=" + power +
+        return "Car{| Brand: " + BRAND +
+                "| Model: " + model +
+                "| Power: " + this.POWER +
                 '}';
     }
+
 }

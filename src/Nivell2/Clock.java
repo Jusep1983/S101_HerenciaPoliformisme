@@ -1,7 +1,7 @@
 package Nivell2;
 
 public interface Clock {
-    default String alarma() {
-        return "Està sonant l’alarma";
+    default String alarm() {
+        return "The alarm is ringing";
     }
 }
