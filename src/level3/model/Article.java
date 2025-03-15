@@ -1,4 +1,4 @@
-package Nivell3;
+package level3.model;
 
 public abstract class Article {
     protected String headline;
@@ -15,24 +15,12 @@ public abstract class Article {
         return headline;
     }
 
-    public String getText() {
-        return text;
-    }
-
     public int getScore() {
         return score;
     }
 
     public int getPrice() {
         return price;
-    }
-
-    public void setHeadline(String headline) {
-        this.headline = headline;
-    }
-
-    public void setText(String text) {
-        this.text = text;
     }
 
     public abstract int calculatePriceArticle();

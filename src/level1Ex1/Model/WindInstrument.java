@@ -1,6 +1,6 @@
-package Nivell1Ex1;
+package level1Ex1.Model;
 
-public class WindInstrument extends Instrument{
+public class WindInstrument extends Instrument {
 
     public WindInstrument(String name, float price) {
         super(name, price);
@@ -8,7 +8,7 @@ public class WindInstrument extends Instrument{
 
     @Override
     public String play() {
-        return "A wind instrument is playing";
+        return "A wind instrument is playing...";
     }
 
     @Override

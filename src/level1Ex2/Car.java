@@ -1,4 +1,4 @@
-package Nivell1Ex2;
+package level1Ex2;
 
 //Crea una classe "Cotxe" amb els atributs: marca, model i potència.
 //La marca ha de ser estàtic final, el model estàtic i la potència final.

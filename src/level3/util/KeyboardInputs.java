@@ -1,15 +1,27 @@
-package Nivell3;
+package level3.util;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+import static level3.menu.MenusTexts.*;
 public class KeyboardInputs {
 
     /*Class to handle correct data input from the keyboard*/
 
     private static final Scanner SC = new Scanner(System.in);
+
+    public static byte menu() {
+        byte option;
+        option = KeyboardInputs.readByteRange(MAIN_MENU, (byte) 0, (byte) 8);
+        return option;
+    }
+
+    public static byte subMenuAddArticle() {
+        byte option;
+        option = KeyboardInputs.readByteRange(SUBMENU_ADD_ARTICLE, (byte) 0, (byte) 5);
+        return option;
+    }
 
     /**
      * This method is responsible for asking for a byte within a range,

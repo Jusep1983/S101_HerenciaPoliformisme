@@ -1,12 +1,12 @@
-package Nivell1Ex1;
+package level1Ex1.Model;
 
-public class StringInstrument extends Instrument{
+public class StringInstrument extends Instrument {
     public StringInstrument(String name, float price) {
         super(name, price);
     }
 
     public String play(){
-        return "A string instrument is playing";
+        return "A string instrument is playing...";
     }
 
     @Override

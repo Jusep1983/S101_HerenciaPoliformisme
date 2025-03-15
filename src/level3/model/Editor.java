@@ -1,4 +1,4 @@
-package Nivell3;
+package level3.model;
 
 import java.util.ArrayList;
 
@@ -11,7 +11,7 @@ public class Editor {
     public Editor(String name, String dni) {
         this.name = name;
         this.dni = dni;
-        this.articles = new ArrayList<Article>();
+        this.articles = new ArrayList<>();
     }
 
     public String getName() {
@@ -22,14 +22,6 @@ public class Editor {
         return articles;
     }
 
-    public void setArticles(ArrayList<Article> articles) {
-        this.articles = articles;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getDni() {
         return dni;
     }
@@ -38,13 +30,9 @@ public class Editor {
         return salary;
     }
 
-    public static void setSalary(int salary) {
-        Editor.salary = salary;
-    }
-
     @Override
     public String toString() {
         return "Redactor {" + "name: " + this.name + ", dni: " + this.dni + ", salary: " + getSalary()
-                + ", Noticias asignadas: " + this.articles + "}\n";
+               + ", Noticias asignadas: " + this.articles + "}\n";
     }
 }

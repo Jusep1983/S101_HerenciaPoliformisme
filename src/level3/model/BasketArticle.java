@@ -1,4 +1,4 @@
-package Nivell3;
+package level3.model;
 
 public class BasketArticle extends Article {
     private String competition;
@@ -10,22 +10,6 @@ public class BasketArticle extends Article {
         this.club = club;
         super.price = calculatePriceArticle();
         super.score = calculateScoreArticle();
-    }
-
-    public String getCompetition() {
-        return competition;
-    }
-
-    public void setCompetition(String competition) {
-        this.competition = competition;
-    }
-
-    public String getClub() {
-        return club;
-    }
-
-    public void setClub(String club) {
-        this.club = club;
     }
 
     public int calculatePriceArticle() {

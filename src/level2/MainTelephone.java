@@ -1,4 +1,4 @@
-package Nivell2;
+package level2;
 
 public class MainTelephone {
 

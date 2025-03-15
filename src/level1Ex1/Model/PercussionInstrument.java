@@ -1,6 +1,6 @@
-package Nivell1Ex1;
+package level1Ex1.Model;
 
-public class PercussionInstrument extends Instrument{
+public class PercussionInstrument extends Instrument {
 
     public PercussionInstrument(String name, float price) {
         super(name, price);
@@ -8,7 +8,7 @@ public class PercussionInstrument extends Instrument{
 
     @Override
     public String play() {
-        return "A percussion instrument is playing";
+        return "A percussion instrument is playing...";
     }
 
     @Override
