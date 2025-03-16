@@ -18,7 +18,7 @@ public class BasketArticle extends Article {
             price += 75;
         }
         if (this.club.equalsIgnoreCase("Barça") ||
-                this.club.equalsIgnoreCase("Madrid")) {
+            this.club.equalsIgnoreCase("Madrid")) {
             price += 75;
         }
         return price;
@@ -41,6 +41,6 @@ public class BasketArticle extends Article {
     public String toString() {
 
         return "\n\tBásquet {" + super.toString()
-                + ", Competición: " + this.competition + ", Club: " + this.club +  "}";
+               + ", Competición: " + this.competition + ", Club: " + this.club + "}";
     }
 }

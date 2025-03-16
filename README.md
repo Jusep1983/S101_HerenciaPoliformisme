@@ -23,7 +23,7 @@ El proyecto ha sido desarrollado utilizando:
 Para ejecutar el proyecto es necesario contar con:
 - **JDK 21** instalado en el sistema
 - **Git** instalado y configurado
-- **IntelliJ IDEA** (preferiblemente la versión Community o Ultimate)
+- **IntelliJ IDEA**
 - **Conexión a internet** para clonar el repositorio
 
 ## 🛠️ Instalación

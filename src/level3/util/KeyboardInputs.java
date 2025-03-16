@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import static level3.menu.MenusTexts.*;
+
+import static level3.menuTexts.MenusTexts.*;
+
 public class KeyboardInputs {
 
     /*Class to handle correct data input from the keyboard*/
@@ -27,9 +29,6 @@ public class KeyboardInputs {
      * This method is responsible for asking for a byte within a range,
      * checking that the data type is correct, it is within the range, and it will return a byte.
      *
-     * @param message
-     * @param maximum
-     * @param minimum
      * @return byte
      */
     public static byte readByteRange(String message, byte minimum, byte maximum) {
@@ -55,7 +54,6 @@ public class KeyboardInputs {
     /**
      * This method is responsible for reading a String from the keyboard, ensuring that no spaces are entered.
      *
-     * @param message
      * @return String
      */
     public static String readANonEmptyString(String message) {
@@ -81,13 +79,12 @@ public class KeyboardInputs {
      * This method receives a String, evaluates and checks that it meets the Spanish DNI format,
      * and returns the DNI as a String in the correct format.
      *
-     * @param message
      * @return String
      */
     public static String readFormatDNI2(String message) {
-        String dniStr = "", numbers = "";
-        char letter = ' ', correctChar = ' ';
-        int dniNumber = 0;
+        String dniStr = "", numbers;
+        char letter , correctChar;
+        int dniNumber;
         boolean correct = false;
         ArrayList<Character> lettersDni = new ArrayList<>(Arrays.asList('T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P',
                 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'));

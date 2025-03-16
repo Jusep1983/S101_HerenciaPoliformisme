@@ -1,11 +1,10 @@
-package level3.main;
+package level3.run;
 
-import level3.menu.MenusTexts;
+import level3.menuTexts.MenusTexts;
 import level3.sampleData.SampleData;
-import level3.services.ManagementArticles;
 import level3.util.KeyboardInputs;
 
-import static level3.services.ManagementArticles.showAllArticlesByEditor;
+import static level3.services.ManagementArticles.*;
 import static level3.services.ManagementEditors.*;
 
 public class SportNewsRoom {
@@ -43,7 +42,7 @@ public class SportNewsRoom {
                     answer = calculatePriceOfArticle();
                     break;
                 case 8:
-                    ManagementArticles.printAllEditorsAndArticles();
+                    printAllEditorsAndArticles();
                     break;
                 case 0:
                     System.out.println("Grácias por utilitzar la aplicación, hasta pronto! ");

@@ -1,6 +1,6 @@
-package level2;
+package level2.model;
 
-public class Telephone  {
+public class Telephone {
     private String brand;
     private String model;
 
@@ -32,8 +32,8 @@ public class Telephone  {
     @Override
     public String toString() {
         return "Telephone{" +
-                "brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                '}';
+               "brand='" + brand + '\'' +
+               ", model='" + model + '\'' +
+               '}';
     }
 }

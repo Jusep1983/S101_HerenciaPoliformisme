@@ -1,4 +1,4 @@
-package level1Ex1.Model;
+package level1Ex1.model;
 
 public class PercussionInstrument extends Instrument {
 

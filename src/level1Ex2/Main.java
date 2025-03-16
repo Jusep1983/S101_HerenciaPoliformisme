@@ -1,6 +1,8 @@
 package level1Ex2;
 
-public class MainCotxe {
+import level1Ex2.model.Car;
+
+public class Main {
 
     public static void main(String[] args) {
         Car car1 = new Car();
@@ -8,9 +10,8 @@ public class MainCotxe {
         System.out.println(Car.brakes());
         System.out.println(car1.accelerate());
         System.out.println(car1);
-        System.out.println(Car.BRAND);
+        System.out.println(Car.getBrand());
         System.out.println(car1.getPOWER());
         System.out.println(Car.getModel());
     }
-
 }

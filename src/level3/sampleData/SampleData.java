@@ -9,7 +9,6 @@ import static level3.services.ManagementArticles.*;
 public class SampleData {
 
     public static void loadInfo() {
-
         Editor editor1 = new Editor("Jose", "11111111H");
         Editor editor2 = new Editor("Rakel", "22222222J");
         Editor editor3 = new Editor("Carlos", "33333333P");
@@ -79,5 +78,4 @@ public class SampleData {
         articles.add(motorcycleArticle2);
         articles.add(motorcycleArticle3);
     }
-
 }

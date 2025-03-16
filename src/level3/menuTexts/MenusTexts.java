@@ -1,4 +1,4 @@
-package level3.menu;
+package level3.menuTexts;
 
 public class MenusTexts {
     public static final String APP_TITLE = """

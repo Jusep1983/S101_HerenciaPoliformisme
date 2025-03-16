@@ -1,6 +1,10 @@
-package level2;
+package level2.model;
 
-public class Smartphone extends Telephone implements Camera, Clock{
+import level2.interfaces.Camera;
+import level2.interfaces.Clock;
+
+public class Smartphone extends Telephone implements Camera, Clock {
+
     public Smartphone(String brand, String model) {
         super(brand, model);
     }
@@ -9,4 +13,5 @@ public class Smartphone extends Telephone implements Camera, Clock{
     public String toString() {
         return "Smartphone{} " + super.toString();
     }
+
 }

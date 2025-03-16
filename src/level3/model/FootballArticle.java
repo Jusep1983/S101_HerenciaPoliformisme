@@ -1,7 +1,5 @@
 package level3.model;
 
-//import java.util.ArrayList;
-
 public class FootballArticle extends Article {
     private String competition;
     private String club;

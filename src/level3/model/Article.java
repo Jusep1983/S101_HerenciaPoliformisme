@@ -30,7 +30,7 @@ public abstract class Article {
     @Override
     public String toString() {
         return "Titular: " + this.headline + ", Texto: " + this.text
-                + ", Puntación: " + this.calculateScoreArticle() + ", Precio: " + this.calculatePriceArticle() + "€";
+               + ", Puntación: " + this.calculateScoreArticle() + ", Precio: " + this.calculatePriceArticle() + "€";
     }
 
 }

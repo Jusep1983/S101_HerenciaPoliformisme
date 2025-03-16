@@ -1,11 +1,11 @@
 package level3.services;
 
+import java.util.ArrayList;
+
 import level3.model.*;
 import level3.util.KeyboardInputs;
 
 import static level3.services.ManagementEditors.*;
-
-import java.util.ArrayList;
 
 public class ManagementArticles {
 
@@ -18,7 +18,7 @@ public class ManagementArticles {
                 answer = "Lista de noticias de fútbol: ";
                 for (Article article : articles) {
                     if (article instanceof FootballArticle) {
-                        answer += "\n\t" + article.getHeadline();
+                        answer += ("\n\t" + article.getHeadline());
                     }
                 }
                 break;
@@ -85,6 +85,104 @@ public class ManagementArticles {
             i++;
         }
         return index;
+    }
+
+    public static int findHeadlineByTypeArticle(String value, int articleType) {
+        int index = -1, i = 0;
+        boolean found = false;
+        switch (articleType) {
+            case 1:
+                while (i < articles.size() && !found) {
+                    if (articles.get(i) instanceof FootballArticle) {
+                        if (articles.get(i).getHeadline().equalsIgnoreCase(value)) {
+                            index = i;
+                            found = true;
+                        }
+                    }
+                    i++;
+                }
+                break;
+            case 2:
+                while (i < articles.size() && !found) {
+                    if (articles.get(i) instanceof BasketArticle) {
+                        if (articles.get(i).getHeadline().equalsIgnoreCase(value)) {
+                            index = i;
+                            found = true;
+                        }
+                    }
+                    i++;
+                }
+                break;
+            case 3:
+                while (i < articles.size() && !found) {
+                    if (articles.get(i) instanceof TennisArticle) {
+                        if (articles.get(i).getHeadline().equalsIgnoreCase(value)) {
+                            index = i;
+                            found = true;
+                        }
+                    }
+                    i++;
+                }
+                break;
+            case 4:
+                while (i < articles.size() && !found) {
+                    if (articles.get(i) instanceof FOneArticle) {
+                        if (articles.get(i).getHeadline().equalsIgnoreCase(value)) {
+                            index = i;
+                            found = true;
+                        }
+                    }
+                    i++;
+                }
+                break;
+            case 5:
+                while (i < articles.size() && !found) {
+                    if (articles.get(i) instanceof MotorcycleArticle) {
+                        if (articles.get(i).getHeadline().equalsIgnoreCase(value)) {
+                            index = i;
+                            found = true;
+                        }
+                    }
+                    i++;
+                }
+                break;
+        }
+        return index;
+    }
+
+    public static void showAllHeadlines() {
+        System.out.println("Lista de noticias: ");
+        for (Article article : articles) {
+            System.out.println("\t" + article.getHeadline());
+        }
+    }
+
+    public static String calculatePointsByArticle() {
+        String answer;
+        String headline = KeyboardInputs.readANonEmptyString(
+                "Introduce el titular de la noticia a la que calcular puntuación: "
+        );
+        int indexHeadline = findArticleHeadline(headline);
+        if (indexHeadline != -1) {
+            answer = "La puntuación de la noticia \"" + headline + "\" és de "
+                     + articles.get(indexHeadline).getScore() + " puntos";
+        } else {
+            answer = "No existe ninguna noticia con titular: \"" + headline + "\"";
+        }
+        return answer;
+    }
+
+    public static String calculatePriceOfArticle() {
+        String answer;
+        String headline = KeyboardInputs.readANonEmptyString("Introduce el titular de la noticia: ");
+        int indexHeadline = findArticleHeadline(headline);
+        if (indexHeadline != -1) {
+            answer = "El precio de la noticia \"" + headline + "\" és de "
+                     + articles.get(indexHeadline).getPrice() + "€";
+        } else {
+            answer = "No existe ninguna noticia con titular: \"" + headline + "\"";
+        }
+        return answer;
     }
 
     public static void printAllEditorsAndArticles() {
