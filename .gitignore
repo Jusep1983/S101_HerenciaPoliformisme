@@ -27,3 +27,9 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# Ignorar archivos específico
+S1Lvl1Ex1_Description
+S1Lvl1Ex2_Description
+S1Lvl2_Description
+S1Lvl3_Description
