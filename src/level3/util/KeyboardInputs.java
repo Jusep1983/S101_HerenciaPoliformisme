@@ -1,7 +1,5 @@
 package level3.util;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -81,43 +79,61 @@ public class KeyboardInputs {
      *
      * @return String
      */
-    public static String readFormatDNI2(String message) {
-        String dniStr = "", numbers;
-        char letter , correctChar;
-        int dniNumber;
-        boolean correct = false;
-        ArrayList<Character> lettersDni = new ArrayList<>(Arrays.asList('T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P',
-                'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'));
+    public static String readFormatDNI(String message) {
+        String dniStr;
+            System.out.println("Ejemplos DNI correctos: 12345678Z 87654321X 11223344B 74246722P 55667788Z 39383352S 69967049Z");
         do {
-            System.out.print(message);
-            try {
-                dniStr = SC.nextLine().toUpperCase().trim().replaceAll("[^A-Z0-9]", "");
-                // Validate length and basic format
-                if (dniStr.length() == 9) {
-                    numbers = dniStr.substring(0, 8);
-                    letter = dniStr.charAt(8);
-                    // Verify that the first 8 positions are numbers
-                    if (numbers.chars().allMatch(Character::isDigit)) {
-                        // Calculate the expected letter
-                        dniNumber = Integer.parseInt(numbers);
-                        correctChar = lettersDni.get(dniNumber % 23);
-                        // Compare the entered letter with the calculated one
-                        if (correctChar == letter) {
-                            correct = true;
-                        } else {
-                            System.out.println("La letra del DNI introducido es incorrecta.");
-                        }
-                    } else {
-                        System.out.println("Las primeras 8 posiciones del DNI deben ser números.");
-                    }
-                } else {
-                    System.out.println("Un DNI debe tener 9 caracteres: 8 números y 1 letra.");
-                }
-            } catch (NumberFormatException ex) {
-                System.out.println("Error en el formato del DNI. Asegúrate de que sea válido.");
-            }
-        } while (!correct);
+            dniStr = KeyboardInputs.readANonEmptyString(message);
+            dniStr = dniStr.toUpperCase().trim().replaceAll("[^A-Z0-9]", "");
+        } while (!isValidDniFormat(dniStr));
         return dniStr;
     }
+
+    private static boolean isValidDniFormat(String dniStr) {
+        if (!isValidLengthDniFormat(dniStr)) return false;
+        if (!isValidNumbersDniFormat(dniStr)) return false;
+        if (!isValidLetterDniFormat(dniStr)) return false;
+        return true;
+    }
+
+    private static boolean isValidLengthDniFormat(String dniStr) {
+        boolean isValid = false;
+        if (dniStr.length() != 9) {
+            System.out.println("Un DNI debe tener 9 caracteres: 8 números y 1 letra.");
+        } else {
+            isValid = true;
+        }
+        return isValid;
+    }
+
+    private static boolean isValidNumbersDniFormat(String dniStr) {
+        boolean isValid = false;
+        String numbers = dniStr.substring(0, 8);
+        if (!numbers.chars().allMatch(Character::isDigit)) {
+            System.out.println("Un DNI debe tener 9 caracteres: 8 números y 1 letra.");
+        } else {
+            isValid = true;
+        }
+        return isValid;
+    }
+
+    private static boolean isValidLetterDniFormat(String dniStr) {
+        boolean isValid = false;
+        String numbers = dniStr.substring(0, 8);
+        char letter = dniStr.charAt(8);
+        if (getExpectedDniLetter(Integer.parseInt(numbers)) != letter) {
+            System.out.println("La letra del DNI introducido es incorrecta.");
+        } else {
+            isValid = true;
+        }
+        return isValid;
+    }
+
+    private static char getExpectedDniLetter(int dniNumber) {
+        final char[] lettersDni = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B',
+                'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
+        return lettersDni[dniNumber % 23];
+    }
+
 
 }

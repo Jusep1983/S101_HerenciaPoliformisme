@@ -20,7 +20,7 @@ public class SportNewsRoom {
                     break;
                 case 2:
                     showAllEditors();
-                    answer = checkIfEditorExists();
+                    answer = checkAndRemoveIfEditorExists();
                     break;
                 case 3:
                     assignArticleToEditor();

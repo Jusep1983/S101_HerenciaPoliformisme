@@ -2,9 +2,9 @@ package level3.menuTexts;
 
 public class MenusTexts {
     public static final String APP_TITLE = """
-            ----------------------------------------------------
+            -----------------------------------------------------
               BIENVENIDO A LA APLICACIÓN DE NOTICÍAS DEPORTIVAS
-            ----------------------------------------------------""";
+            -----------------------------------------------------""";
     public static final String MAIN_MENU = """
             
             MENÚ PRINCIPAL
